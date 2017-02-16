@@ -1,0 +1,43 @@
+{
+  "tests": "./examples/tipico_login_test.js",
+  "timeout": 10000,
+  "output": "./examples/output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "http://localhost",
+      "restart": true,
+      "browser": "chrome",
+      "windowSize": "415x730",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A405 Safari/600.1.4"
+          ]
+        },
+        "mobileEmulationEnabled": true
+      },
+      "coloredLogs": true
+    },
+    "WebdriverCSS": {
+      "require": "lib/helper/webdrivercss_helper.js"
+    }
+  },
+  "mocha": {
+    "reporterOptions": {
+      "reportDir": "./examples/output",
+      "enableCharts": true,
+      "reportTitle": "Spartan Reporter"
+    }
+  },
+  "name": "tests",
+  "bootstrap": "./bootstrap.js",
+  "include": {
+    "I": "./examples/custom_steps.js",
+    "Smth": "./examples/pages/Smth.js",
+    "loginPage": "./examples/pages/Login.js",
+    "homePage": "./examples/pages/Home.js",
+    "registrationPage": "./examples/pages/Registration.js",
+    "newLookPopupFragment": "./examples/fragments/newLookPopup.js"
+  }
+}

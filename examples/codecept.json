@@ -1,13 +1,19 @@
 {
-  "tests": "./*_test.js",
+  "tests": "./tipico_login_test.js",
   "timeout": 10000,
   "output": "./output",
-  "helpers": {
-    "WebDriverIO": {
+  "WebDriverIO": {
+    "desiredCapabilities": {
+      "platformName": "iOS",
       "url": "http://localhost",
-      "browser": "chrome",
-      "restart": true
-    }
+      "deviceName": "iPhone",
+      "platformVersion": "6.0.1",
+      "browserName": "Safari",
+      "udid": "d40958d9a29cda7949f84216c07aed6ece041f62"
+
+    },
+    "port": 4723,
+    "restart": false
   },
   "mocha": {
     "reporterOptions": {

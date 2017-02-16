@@ -8,9 +8,15 @@ exports.config = {
   "output": "./output",
   "helpers": {
     "WebDriverIO": {
-      "url": "http://localhost",
-      "browser": process.profile || 'firefox',
-      "restart": true
+      "desiredCapabilities": {
+        "platformName": "Android",
+        "appPackage": "com.example.android.myApp",
+        "appActivity": "MainActivity",
+        "deviceName": "OnePlus3",
+        "platformVersion": "6.0.1"
+      },
+      "port": 4723,
+      "restart": false
     }
   },
   "mocha": {
